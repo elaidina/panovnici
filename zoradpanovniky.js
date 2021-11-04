@@ -1,7 +1,7 @@
 const draggable_list = document.getElementById('draggable-list');
 const check = document.getElementById('check');
 
-const richestPeople = [
+const panovnici = [
   'Bořivoj I.',
   'Spytihněv I.',
   'Vratislav I.',
@@ -78,7 +78,7 @@ createList();
 
 // Insert list items into DOM
 function createList() {
-  [...richestPeople]
+  [...panovnici]
     .map(a => ({ value: a, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
     .map(a => a.value)
@@ -151,7 +151,7 @@ function checkOrder() {
   listItems.forEach((listItem, index) => {
     const personName = listItem.querySelector('.draggable').innerText.trim();
 
-    if (personName !== richestPeople[index]) {
+    if (personName !== panovnici[index]) {
       listItem.classList.add('wrong');
     } else {
       listItem.classList.remove('wrong');
