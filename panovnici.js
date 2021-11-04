@@ -73,9 +73,6 @@ let dragStartIndex;
 
 createList();
 
-
-
-
 // Insert list items into DOM
 function createList() {
   [...richestPeople]
@@ -101,8 +98,6 @@ function createList() {
     });
 
   addEventListeners();
-  
-
 }
 
 function dragStart() {
@@ -115,12 +110,9 @@ function dragEnter() {
   this.classList.add('over');
 }
 
-
-
 function dragLeave() {
   // console.log('Event: ', 'dragleave');
   this.classList.remove('over');
-  
 }
 
 function dragOver(e) {
@@ -134,7 +126,6 @@ function dragDrop() {
   swapItems(dragStartIndex, dragEndIndex);
 
   this.classList.remove('over');
-  checkOrder();
 }
 
 // Swap list items that are drag and drop
@@ -173,8 +164,7 @@ function addEventListeners() {
     item.addEventListener('drop', dragDrop);
     item.addEventListener('dragenter', dragEnter);
     item.addEventListener('dragleave', dragLeave);
-  
   });
+  
+  draggable_list.addEventListener('mousemove', checkOrder);
 }
-
-check.addEventListener('click', checkOrder);
