@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda&family=Poppins&display=swap");
 
 :root {
   --border-color: #e3e5e4;
@@ -11,8 +11,38 @@
 }
 
 h1 {
-  margin-top: 5rem;
+  font-family: "Merienda", cursive;
+  margin-top: 3rem;
   color: white;
+}
+
+nav button {
+  background-image: linear-gradient(
+    to right,
+    #ff6e7f 0%,
+    #bfe9ff 51%,
+    #ff6e7f 100%
+  );
+}
+nav button {
+  text-align: center;
+  padding: 0.5rem 1rem;
+  transition: 1s;
+  background-size: 200% auto;
+  color: rgb(4, 57, 61);
+  border: none;
+  border-radius: 10px;
+}
+
+nav button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: rgb(4, 57, 61);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
@@ -41,7 +71,7 @@ body {
   background-color: rgb(16, 128, 136);
   display: flex;
   flex: 1;
-
+  font-family: "Merienda", cursive;
   margin: 0.5rem;
   padding: 0.5rem;
   box-shadow: 5px 5px 20px 5px #000000;
